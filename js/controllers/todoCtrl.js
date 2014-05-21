@@ -34,9 +34,9 @@ angular.module('todomvc')
 
 		$scope.addTodo = function () {
 			var newTodo = $scope.newTodo.trim();
-			var newTodoCat = $scope.newTodoCat.trim();
-			var newTodoPrice = $scope.newTodoPrice.trim();
-			var newTodoImportance = $scope.newTodoImportance.trim();
+			var newTodoCat = $scope.newTodoCat;
+			var newTodoPrice = $scope.newTodoPrice;
+			var newTodoImportance = $scope.newTodoImportance;
 			if (!newTodo.length) {
 				return;
 			}

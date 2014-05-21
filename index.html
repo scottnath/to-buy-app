@@ -58,6 +58,7 @@
 							<th>Category</th>
 							<th>Price</th>
 							<th>Importance</th>
+							<th></th>
 						</tr>
 						<tr ng-repeat-start="todo in todos | filter:statusFilter track by $index" ng-class="{completed: todo.completed, editing: todo == editedTobuy}">
 							<td><input class="toggle" type="checkbox" ng-model="todo.completed"></td>
@@ -65,14 +66,14 @@
 							<td>{{todo.category}}</td>
 							<td>{{todo.price}}</td>
 							<td>{{todo.importance}}</td>
+							<td></td>
 						</tr>
 						<tr ng-repeat-end class="edit-row" ng-class="{completed: todo.completed, edit: todo == editedTobuy}">
-							<form ng-submit="doneEditingTobuy(todo)">
-							<td>XO</td>
-							<td><input ng-trim="false" ng-model="todo.title"></td>
-							<td><input ng-trim="false" ng-model="todo.category"></td>
-							<td><input ng-trim="false" ng-model="todo.price"></td>
-							<td><select ng-model="todo.importance">
+							
+							<td colspan="6"><form ng-submit="doneEditingTobuy(todo)">EDIT<input ng-trim="false" ng-model="todo.title">
+							<input ng-trim="false" ng-model="todo.category">
+							<input ng-trim="false" ng-model="todo.price">
+							<select ng-model="todo.importance">
 											<option value="">select</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -84,8 +85,8 @@
 											<option value="8">8</option>
 											<option value="9">9</option>
 											<option value="10">10</option>
-										</select></td>
-							<button type="submit" ng-click="doneEditingTobuy(todo)">submit</button></form>
+										</select>
+										<button type="submit" ng-click="doneEditingTobuy(todo)">submit</button></form></td>
 						</tr>
 					</table>
 					<ul id="todo-list">
