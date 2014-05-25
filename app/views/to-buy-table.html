@@ -1,0 +1,42 @@
+<h2>Without Edit form:</h2>
+<table id="tobuy-table">
+  <tr>
+    <th>Bought</th>
+    <th>Item</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Importance</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat="tobuy in tobuys | filter:statusFilter track by $index" ng-class="{completed: tobuy.completed, editing: tobuy == editedTobuy}">
+    <td><input class="toggle" type="checkbox" ng-model="tobuy.completed"></td>
+    <td><label ng-dblclick="editTobuy(tobuy)">{{tobuy.title}}</label></td>
+    <td>{{tobuy.category}}</td>
+    <td>{{tobuy.price}}</td>
+    <td>{{tobuy.importance}}</td>
+    <td></td>
+  </tr>
+</table>
+
+<h2>With Edit form:</h2>
+<table id="tobuy-table">
+  <tr>
+    <th>Bought</th>
+    <th>Item</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Importance</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat-start="tobuy in tobuys | filter:statusFilter track by $index" ng-class="{completed: tobuy.completed, editing: tobuy == editedTobuy}">
+    <td><input class="toggle" type="checkbox" ng-model="tobuy.completed"></td>
+    <td><label ng-dblclick="editTobuy(tobuy)">{{tobuy.title}}</label></td>
+    <td>{{tobuy.category}}</td>
+    <td>{{tobuy.price}}</td>
+    <td>{{tobuy.importance}}</td>
+    <td></td>
+  </tr>
+  <tr ng-repeat-end class="edit-row" ng-class="{completed: tobuy.completed, edit: tobuy == editedTobuy}">
+    <td colspan="6"><to-buy-edit></to-buy-edit></td>
+  </tr>
+</table>

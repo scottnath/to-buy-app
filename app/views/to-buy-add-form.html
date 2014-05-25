@@ -1,0 +1,32 @@
+<form id="Tobuy-form" ng-submit="addTobuy()" action="Javascript:;">
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Importance</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><input id="new-Tobuy" placeholder="What needs to be done?" ng-model="newTobuy" autofocus></td>
+      <td><input id="new-Tobuy-cat" ng-model="newTobuyCat"></td>
+      <td><input id="new-Tobuy-price" ng-model="newTobuyPrice"></td>
+      <td><select id="new-Tobuy-importance" ng-model="newTobuyImportance">
+          <option value="">select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </td>
+      <td><button type="submit">submit</button></td>
+    </tr>
+  </table>
+
+</form>
