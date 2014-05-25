@@ -3,10 +3,11 @@ define(['angular'], function (angular) {
 
   angular.module('toBuyAppApp.controllers.MainCtrl', [])
     .controller('MainCtrl', function ($scope) {
-      $scope.awesomeThings = [
+      $scope.awesomeThings3 = [
         'HTML5 Boilerplate',
         'AngularJS',
         'Karma'
       ];
+      $scope.predicate = '-age';
     });
 });
