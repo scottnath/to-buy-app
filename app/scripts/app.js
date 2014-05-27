@@ -1,5 +1,5 @@
 /*jshint unused: vars */
-define(['angular', 'controllers/main', 'controllers/to-buy-list', 'directives/to-buy-add', 'directives/to-buy-table', 'directives/to-buy-edit', 'controllers/to-buy-add', 'services/tobuy-storage']/*deps*/, function (angular, MainCtrl, ToBuyListCtrl, ToBuyAddDirective, ToBuyTableDirective, ToBuyEditDirective, ToBuyAddCtrl, TobuyStorageService, TobuyStorageFactory)/*invoke*/ {
+define(['angular', 'controllers/main', 'controllers/to-buy-list', 'directives/to-buy-add', 'directives/to-buy-table', 'directives/to-buy-edit', 'controllers/to-buy-add', 'services/tobuy-storage', 'services/mongolab']/*deps*/, function (angular, MainCtrl, ToBuyListCtrl, ToBuyAddDirective, ToBuyTableDirective, ToBuyEditDirective, ToBuyAddCtrl, TobuyStorageService, TobuyStorageFactory, MongolabFactory)/*invoke*/ {
   'use strict';
 
   return angular.module('toBuyAppApp', ['toBuyAppApp.controllers.MainCtrl',
@@ -9,6 +9,7 @@ define(['angular', 'controllers/main', 'controllers/to-buy-list', 'directives/to
 'toBuyAppApp.directives.ToBuyEdit',
 'toBuyAppApp.controllers.ToBuyAddCtrl',
 'toBuyAppApp.services.TobuyStorage',
+'toBuyAppApp.services.Mongolab',
 /*angJSDeps*/
   'ngCookies',
   'ngResource',

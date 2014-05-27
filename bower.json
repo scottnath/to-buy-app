@@ -9,7 +9,8 @@
     "angular-resource": "1.2.11",
     "angular-cookies": "1.2.11",
     "angular-sanitize": "1.2.11",
-    "angular-route": "1.2.11"
+    "angular-route": "1.2.11",
+    "restangular": "latest"
   },
   "devDependencies": {
     "angular-mocks": "1.2.11",
