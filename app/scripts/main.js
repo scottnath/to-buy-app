@@ -7,6 +7,7 @@ require.config({
     'angular-resource': '../bower_components/angular-resource/angular-resource',
     'angular-mocks': '../bower_components/angular-mocks/angular-mocks',
     'angular-cookies': '../bower_components/angular-cookies/angular-cookies',
+    'lodash': '../bower_components/lodash/dist/lodash.min',
     'restangular': '../bower_components/restangular/src/restangular',
     angular: '../bower_components/angular/angular'
   },
@@ -31,7 +32,10 @@ require.config({
         'angular'
       ],
       exports: 'angular.mock'
-    }
+    },
+    'restangular': [
+      'angular', 'lodash'
+    ]
   },
   priority: [
     'angular'
