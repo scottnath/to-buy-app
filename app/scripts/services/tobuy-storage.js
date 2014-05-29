@@ -4,7 +4,7 @@ define(['angular'], function (angular) {
   angular.module('toBuyAppApp.services.TobuyStorage', [])
     .factory('tobuyStorage', function () {
       var STORAGE_ID = 'tobuys-angularjs';
-      console.log('tobuystorage triggered '+ STORAGE_ID)
+      console.log('tobuystorage triggered '+ STORAGE_ID);
       return {
         get: function () {
           return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');

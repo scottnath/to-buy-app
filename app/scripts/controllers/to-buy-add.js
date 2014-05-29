@@ -5,7 +5,7 @@ define(['angular'], function (angular) {
     .controller('ToBuyAddCtrl', function ($scope,tobuyStorage, $filter) {
 
       var tobuys = $scope.tobuys = tobuyStorage.get();
-      console.log("tobuys");
+      console.log('tobuys');
       console.log(tobuys);
       $scope.newTobuy = '';
       $scope.addTobuy = function () {

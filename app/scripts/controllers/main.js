@@ -1,4 +1,4 @@
-define(['angular','restangular'], function (angular,restangular) {
+define(['angular'], function (angular) {
   'use strict';
 
   angular.module('toBuyAppApp.controllers.MainCtrl', ['restangular'])
