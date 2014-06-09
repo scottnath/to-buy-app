@@ -10,13 +10,13 @@
     <th><a href="Javascript:;" ng-click="predicate = 'importance'; reverse=!reverse">Importance</a></th>
     <th></th>
   </tr>
-  <tr ng-repeat="tobuy in tobuys | orderBy:predicate:reverse | filter:statusFilter track by $index">  
+  <tr ng-repeat="tobuy in tobuys | orderBy:predicate:reverse | filter:statusFilter track by $index">
     <td><input class="toggle" type="checkbox" ng-model="tobuy.completed"></td>
     <td><label ng-dblclick="editing = true" ng-hide="editing">{{tobuy.title}}</label></td>
     <td>{{tobuy.category}}</td>
     <td>{{tobuy.price}}</td>
     <td>{{tobuy.importance}}</td>
-    <td><a href="#/edit/{{tobuy._id.$oid}}">edit</a><a href="Javascript:;" ng-click="destroy()">edit</a></td>
+    <td><a href="#/edit/{{tobuy._id.$oid}}">edit</a><a href="Javascript:;" ng-click="destroy(tobuys,$index)">DESTROY!!!!</a></td>
   </tr>
 
 </table>
